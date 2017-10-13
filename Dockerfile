@@ -8,5 +8,8 @@ RUN apt-get update && \
     apt-get install -y phpunit && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+    
+RUN curl -sS https://getcomposer.org/installer \
+    | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
 CMD ["phpunit"]
