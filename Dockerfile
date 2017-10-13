@@ -8,9 +8,11 @@ RUN apt-get update && \
     apt-get install -y software-properties-common python-software-properties
 
 RUN apt-get install -y git curl wget && \
-    add-apt-repository ppa:ondrej/php5-5.6 && \
+    add-apt-repository -y ppa:ondrej/php && \
     apt-get update && \
-    apt-get install -y php5 php5-mcrypt php5-mysql php5-curl php5-cli php5-gd php5-intl && \
+    apt-get install -y php5.6 php5.6-mcrypt php5.6-mysql php5.6-curl \
+    php5.6-cli php5.6-gd php5.6-intl php5.6-mbstring \
+    php5.6-mbstring && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
