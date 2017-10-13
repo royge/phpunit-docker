@@ -1,5 +1,6 @@
-# PHPUnit Docker Container.
+# PHPUnit 5.7.19 Docker Container.
 FROM ubuntu:trusty
+
 MAINTAINER Roy Evangelista <royevangelista@gmail.com>
 
 RUN apt-get update && \
