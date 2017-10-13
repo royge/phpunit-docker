@@ -1,10 +1,13 @@
 # PHPUnit 5.7.19 Docker Container.
 FROM ubuntu:trusty
 
+# Author
 MAINTAINER Roy Evangelista <royevangelista@gmail.com>
 
 RUN apt-get update && \
-    apt-get install -y git curl wget python-software-properties && \
+    apt-get install -y software-properties-common python-software-properties
+
+RUN apt-get install -y git curl wget && \
     add-apt-repository ppa:ondrej/php5-5.6 && \
     apt-get update && \
     apt-get install -y php5 php5-mcrypt php5-mysql php5-curl php5-cli php5-gd php5-intl && \
