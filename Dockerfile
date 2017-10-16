@@ -7,7 +7,7 @@ MAINTAINER Roy Evangelista <royevangelista@gmail.com>
 RUN apt-get update && \
     apt-get install -y software-properties-common python-software-properties
 
-RUN apt-get install -y git curl wget && \
+RUN apt-get install -y git curl wget libmemcached-dev && \
     add-apt-repository -y ppa:ondrej/php && \
     apt-get update && \
     apt-get install -y --force-yes php5.6 php5.6-common php5.6-mcrypt php5.6-mysql php5.6-curl \
