@@ -12,7 +12,7 @@ RUN apt-get update && \
 RUN apt-get install -y git curl wget libmemcached-dev
 
 # Install an UTF-8 locale for en_US
-RUN apt-get install language-pack-en && locale-gen en_US.UTF-8 && export LANG=en_US.UTF-8
+RUN apt-get install -y language-pack-en && locale-gen en_US.UTF-8 && export LANG=en_US.UTF-8
 
 # Add custom PHP PPA and update
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update
