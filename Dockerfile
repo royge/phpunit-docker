@@ -15,7 +15,7 @@ RUN apt-get install -y git curl wget libmemcached-dev
 RUN apt-get install -y language-pack-en && locale-gen en_US.UTF-8 && export LANG=en_US.UTF-8
 
 # Add custom PHP PPA and update
-RUN add-apt-repository -y ppa:ondrej/php && apt-get update
+RUN LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php && apt-get update
 
 # Install required PHP packages
 RUN apt-get install -y --force-yes php5.6 php5.6-common php5.6-mcrypt php5.6-mysql php5.6-curl \
