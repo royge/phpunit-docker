@@ -20,7 +20,7 @@ RUN LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php && apt-get update
 # Install required PHP packages
 RUN apt-get install -y --force-yes php5.6 php5.6-common php5.6-mcrypt php5.6-mysql php5.6-curl \
     php5.6-cli php5.6-gd php5.6-intl php5.6-mbstring php5.6-json php5.6-opcache \
-    php5.6-xsl php5.6-zip php5.6-xml php5.6-memcached
+    php5.6-xsl php5.6-zip php5.6-xml php-memcached
 
 # Clean
 RUN apt-get clean && \
