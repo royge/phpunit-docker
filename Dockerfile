@@ -1,5 +1,5 @@
 # PHPUnit 5.7.19 Docker Container.
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 
 # Author
 MAINTAINER Roy Evangelista <royevangelista@gmail.com>
