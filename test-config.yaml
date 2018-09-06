@@ -1,0 +1,31 @@
+schemaVersion: '2.0.0'
+commandTests:
+  - name: "PHP installation"
+    command: "which"
+    args: ["php"]
+    expectedOutput: ["/usr/bin/php\n"]
+
+  - name: "PHP version"
+    command: "php"
+    args: ["--version"]
+    expectedOutput: ["7.0.*"]
+
+  - name: "phpunit installation"
+    command: "which"
+    args: ["phpunit"]
+    expectedOutput: ["/usr/local/bin/phpunit\n"]
+
+  - name: "phpunit version"
+    command: "phpunit"
+    args: ["--version"]
+    expectedOutput: ["5.7.19*"]
+
+  - name: "composer installation"
+    command: "which"
+    args: ["composer"]
+    expectedOutput: ["/usr/local/bin/composer\n"]
+
+  - name: "composer version"
+    command: "composer"
+    args: ["--version"]
+    expectedOutput: ["1.7*"]
