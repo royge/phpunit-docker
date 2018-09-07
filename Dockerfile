@@ -9,12 +9,12 @@ RUN apt-get update && \
     apt-get install -y software-properties-common python-software-properties
 
 # Install git, curl, wget and memcache header files
-RUN apt-get install -y git curl wget libmemcached-dev
+RUN apt-get install -y git curl wget libmemcached-dev sqlite unzip
 
 # Install required PHP packages
 RUN apt-get install -y --force-yes php php-common php-mcrypt php-mysql php-curl \
     php-cli php-gd php-intl php-mbstring php-json php-opcache \
-    php-xsl php-zip php-xml php-memcached
+    php-xsl php-zip php-xml php-memcached php-sqlite3
 
 # Clean
 RUN apt-get clean && \
